@@ -19,7 +19,7 @@ COPY app/ ./app
 COPY src/ ./src 
 COPY models/ ./models 
 
-RUN useradd -m appuser  && chown - R appuser:appuser /app
+RUN useradd -m appuser  && chown -R appuser:appuser /app
 USER appuser 
 
 EXPOSE 8000
